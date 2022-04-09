@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-    <title>Void 19 US Tracker</title>
+    <title>Covid 19 US Tracker</title>
 </svelte:head>
 
 <div class="section header">

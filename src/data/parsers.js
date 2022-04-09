@@ -5,14 +5,14 @@ function usStats(data) {
     const [usStatRaw] = data
 
     return {
-        cases: format.number(usStatRaw.positive),
-        deaths: format.number(usStatRaw.death),
-        recovered: format.number(usStatRaw.recovered),
-        ventilator: format.number(usStatRaw.onVentilatorCurrently),
-        hospitalized: format.number(usStatRaw.hospitalized),
-        icu: format.number(usStatRaw.inIcuCurrently),
-        tested: format.number(usStatRaw.totalTestResults),
-        updated: moment(usStatRaw.lastModified).format('LLLL')
+        cases: format.number(usStatRaw.cases),
+        deaths: format.number(usStatRaw.deaths),
+        vaccines: format.number(usStatRaw.vaccinesAdministered),
+        infectionRate: format.number(usStatRaw.infectionRate),
+        hospitalized: format.number(usStatRaw.hospitalBeds.currentUsageCovid),
+        icu: format.number(usStatRaw.icuBeds.currentUsageCovid),
+        testedPositive: format.number(usStatRaw.positiveTests),
+        updated: moment(usStatRaw.lastUpdatedDate).format('LLLL')
     }
 }
 
